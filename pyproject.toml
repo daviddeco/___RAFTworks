@@ -1,0 +1,21 @@
+
+[tool.poetry]
+name = "high_sales_report"
+version = "0.1.0"
+description = "Data-driven app for analyzing store performance"
+authors = ["Captain Dave"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+pandas = "*"
+sqlmodel = "*"
+uvicorn = "*"
+streamlit = "*"
+openpyxl = "*"
+python-dotenv = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

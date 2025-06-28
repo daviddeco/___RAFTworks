@@ -1,0 +1,134 @@
+#* My DS-ML-FastAPI-DevOps-SQL ignore file for GIT
+
+
+#* Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+#C extensions
+*.so
+
+#* Virtual environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+
+#* Put my more customized ones here
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Pytest cache
+.pytest_cache/
+
+# VSCode settings
+.vscode/
+.history/
+
+# MyPy, Coverage, and profiling
+.mypy_cache/
+.coverage
+.cache/
+.prof
+*.prof
+
+# Python/pip environment metadata
+pip-wheel-metadata/
+*.egg-info/
+*.egg
+*.log
+
+# Distribution / packaging
+build/
+dist/
+*.tar.gz
+*.whl
+
+# SQLAlchemy / Alembic
+alembic.ini
+migrations/
+
+# FastAPI auto-generated artifacts
+*.db
+*.sqlite3
+*.pid
+
+# Streamlit cache (if used)
+.streamlit/
+
+# Jupyter Notebook output
+*.nbconvert.ipynb
+
+# Data files and output
+data/
+datasets/
+outputs/
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.pkl
+*.joblib
+*.db
+*.sqlite
+*.npy
+*.npz
+
+# Secrets / Configs
+.env
+.env.*
+secrets/
+*.key
+*.pem
+*.crt
+
+# Docker
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# JetBrains IDEs (e.g., PyCharm)
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Coverage reports
+htmlcov/
+coverage.xml
+
+# Testing artifacts
+.tox/
+.nox/
+
+# Node (if used with frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local databases / test data
+*.sqlite
+*.sqlite3
+
+# PowerShell History (if saved)
+PSReadLineHistory.txt
