@@ -10,7 +10,7 @@ FROM sales_data;
 WITH RankedEmployees AS (
     SELECT name, dept, salary, RANK() OVER (PARTITION BY dept ORDER BY salary DESC) AS emp_rank
     FROM employees
-)
+)git pull 
 -- now just display what we want to see end result
 SELECT name, dept, salary
 FROM RankedEmployees
