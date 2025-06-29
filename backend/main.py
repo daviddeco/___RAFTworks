@@ -26,7 +26,7 @@ import pandas as pd
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup
-    app.mongodb_client = AsyncIOMotorClient(DB_URL)
+    #! app.mongodb_client = AsyncIOMotorClient(DB_URL)   *NEEDED FOR MONGO
     app.mongodb = app.mongodb_client[DB_NAME]
     yield
     # Shutdown
@@ -35,13 +35,13 @@ async def lifespan(app: FastAPI):
 
 # local needs
 from utils.reporting_template import get_high_sales
-from ___RAFTworks.backend.api.v1.crud import get_sales_data, sales
+from backend.api.v1.crud import get_sales_data, sales
 
 
 app = FastAPI(lifespan=lifespan)
 df = pd.read_csv("data/stores.csv")
 
-router = APIRouter()
+# ! router = APIRouter() - need this next step
 
 
 app.add_middleware(
@@ -61,7 +61,6 @@ def read_sales():
 # Use Router - This should likely be moved
 @app.get("/high-sales")
 def read_high_sales(threshold: float = 1800):
-
     hs = get_high_sales(df, threshold)
     if hs.empty:
         return {"message": "NONE had high sales"}
