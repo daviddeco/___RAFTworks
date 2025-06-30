@@ -1,14 +1,32 @@
-
-[project]
+[tool.poetry]
 name = "raftworks"
 version = "0.1.0"
 description = "Starship SmartBytes RAFTworks project"
-authors = [{ name = "Captain Dave" }]
-requires-python = ">=3.13"
+authors = ["Captain Dave"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "*"
+pandas = "*"
+sqlmodel = "*"
+uvicorn = "*"
+streamlit = "*"
+openpyxl = "*"
+python-dotenv = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+ruff = "*"
+black = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 100
-target-version = ["py313"]
+target-version = ["py311"]
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -23,34 +41,11 @@ exclude = '''
 
 [tool.ruff]
 line-length = 100
-target-version = "py313"
-select = ["E", "F", "I"]  # Errors, Pyflakes, isort
-ignore = ["E501"]    
+target-version = "py311"
+select = ["E", "F", "I"]
+ignore = ["E501"]
 
 [tool.pytest.ini_options]
 minversion = "7.0"
 addopts = "-ra -q"
-testpaths = [
-  "tests"
-]
-
-[tool.poetry]
-name = "high_sales_report"
-version = "0.1.0"
-description = "Data-driven app for analyzing store performance"
-authors = ["Captain Dave"]
-
-[tool.poetry.dependencies]
-python = "^3.11"
-fastapi = "*"
-pandas = "*"
-sqlmodel = "*"
-uvicorn = "*"
-streamlit = "*"
-openpyxl = "*"
-python-dotenv = "*"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
+testpaths = ["tests"]
