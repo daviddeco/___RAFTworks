@@ -19,6 +19,7 @@ exclude = '''
   | __pycache__
   | data
 )/
+'''
 
 [tool.ruff]
 line-length = 100
